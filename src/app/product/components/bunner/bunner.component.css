@@ -1,0 +1,8 @@
+.bunner-homepage,
+.bunner-homepage div#carouselExampleIndicators,
+.bunner-homepage .carousel-inner,
+.bunner-homepage .carousel-item img {
+    height: 70vh;
+    position: relative;
+    max-height: 70vh;
+}

@@ -1,0 +1,147 @@
+.fk-height {
+    height: 78px;
+}
+
+.menu-bar {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav.nave-bar ul {
+    display: flex;
+    align-items: center;
+}
+
+nav.nave-bar ul li {
+    margin: 0 5px;
+    position: relative;
+    font-size: 18px;
+    font-weight: 500;
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+}
+
+li.darop-menu {
+    display: flex;
+    align-items: center;
+}
+
+.drop-dawn-menu {
+    position: absolute;
+    top: 50px;
+    width: max-content;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #ffffff;
+    color: #000000d1;
+    box-shadow: 0px 8px 15px #6e6e6eb3;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    border-top: 4px solid #ff201e;
+}
+
+li.darop-menu:hover .drop-dawn-menu {
+    opacity: 1;
+    visibility: visible;
+    transition: .3s ease-in-out;
+    top: 40px;
+}
+
+.drop-dawn-menu ul li:hover {
+    transform: scale(1.05);
+    transition: .3s ease-in-out;
+}
+
+nav.nave-bar ul .drop-dawn-menu>ul {
+    display: block;
+    padding: 10px 20px;
+}
+
+nav.nave-bar ul .drop-dawn-menu>ul li {
+    padding: 5px 0;
+    border-bottom: 1px solid #dadada4f;
+}
+
+.user-interface ul {
+    display: flex;
+    align-items: center;
+}
+
+section.header-bar {
+    background: #fff;
+    padding: 15px 0;
+    box-shadow: 0px 8px 16px #58585887;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+.user-interface ul li i {
+    font-size: 22px;
+    color: #000;
+    cursor: pointer;
+}
+
+.user-interface>ul>li>a>i:hover,
+.user-interface>ul>li>i:hover {
+    color: red;
+}
+
+.logo-img {
+    width: 230px;
+    height: 48px;
+}
+
+.search-popup {
+    position: relative;
+    top: 34px;
+    width: 100%;
+    left: 0;
+    background: #ff2020;
+    padding: 5px 13px;
+    transition: .3s ease-in-out;
+}
+
+section.header-bar .container {
+    position: relative;
+}
+
+.search-box input {
+    border: unset;
+    background: #ff2020;
+    width: 80%;
+    padding: 0 20px;
+}
+
+.search-box input::placeholder {
+    color: #fff;
+    font-size: 20px;
+    padding: 0 20px;
+}
+
+.search-box {
+    width: 95%;
+    /* background: #fff; */
+    justify-content: space-between;
+    margin: 0 auto;
+    display: flex;
+}
+
+.close-btn {
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.search-popup.active {
+    transition: .3s ease-in-out;
+    top: 80px;
+}
