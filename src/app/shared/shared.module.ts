@@ -6,6 +6,8 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
 import { SelectComponent } from './components/select/select.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,7 @@ import { TranslateModule } from '@ngx-translate/core';
   ],
   imports: [
     CommonModule,
+    FormsModule,
     TranslateModule.forChild({
     extend:true
     })
@@ -26,8 +29,11 @@ import { TranslateModule } from '@ngx-translate/core';
     FooterComponent,
     SpinnerComponent,
     SelectComponent,
+    RouterModule,
+    FormsModule,
     NotFoundComponent
   ],
   providers: [],
 })
 export class SharedModule { }
+

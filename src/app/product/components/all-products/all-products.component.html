@@ -2,19 +2,24 @@
     <app-bunner></app-bunner>
 </section>
 <section class="offers ">
-    <section class="ofers-section">
+    <div class="ofers-section">
         <div class="description-offers">
-            <p>Sale Up To 50% Biggest Discounts. Hurry! Limited Perriod Offer <a href="#" class="browse-btn">Shop Now</a></p>
+            <p>{{'unlimtoffers'| translate}} <a href="#" class="browse-btn">{{'ShopNow' |translate}}</a></p>
         </div>
-    </section>
+    </div>
 
 </section>
-<section class="first-api container">
+<section class="first-api container" *ngIf="!loading">
     <div class="title-option d-flex justify-content-between">
-        <h3>get the first type of product</h3>
-        <span class="see-more">see more</span>
+        <h3> {{'typeofproduct'| translate}}</h3>
+        <span class="see-more" routerLink="/first-all-products">{{'see-more'|translate}}</span>
     </div>
-    <div class="first-api-data">
-        <app-first-product></app-first-product>
+    <div class="first-api-data row">
+        <div class="product-crd col-md-3 col-sm-12" *ngFor="let item of listProduct | slice:0:8">
+            <app-first-product [data]="item"></app-first-product>
+        </div>
     </div>
 </section>
+<div class="text-center w-100" *ngIf="loading">
+    <app-spinner></app-spinner>
+</div>

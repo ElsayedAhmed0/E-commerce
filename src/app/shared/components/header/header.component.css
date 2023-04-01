@@ -81,7 +81,7 @@ section.header-bar {
     box-shadow: 0px 8px 16px #58585887;
     position: fixed;
     width: 100%;
-    z-index: 2;
+    z-index: 5;
 }
 
 .user-interface ul li i {

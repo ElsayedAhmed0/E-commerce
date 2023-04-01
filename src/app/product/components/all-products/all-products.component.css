@@ -1,4 +1,4 @@
-section.ofers-section {
+.ofers-section {
     width: 100%;
     padding: 15px;
     display: flex;
@@ -8,12 +8,16 @@ section.ofers-section {
     color: #fff;
 }
 
-section.ofers-section p {
+.title-option {
+    margin: 20px 0 30px 0;
+}
+
+.ofers-section p {
     margin: 0;
     font-size: 16px;
 }
 
-section.ofers-section p a {
+.ofers-section p a {
     color: #CEBD9C !important;
     text-decoration: underline;
     font-weight: 500;
@@ -21,6 +25,7 @@ section.ofers-section p a {
 
 .title-option h3 {
     font-size: 18px;
+    margin-bottom: 0;
 }
 
 section.first-api {

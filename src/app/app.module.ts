@@ -11,6 +11,8 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClientModule } from '@angular/common/http';
+import { SwiperModule } from 'swiper/angular';
+import { DropdownModule } from 'primeng/dropdown';
 @NgModule({
   declarations: [
     AppComponent
@@ -23,19 +25,27 @@ import { HttpClientModule } from '@angular/common/http';
     SharedModule,
     WishlistModule,
     HttpClientModule,
-    TranslateModule.forRoot({
-      defaultLanguage:'en',
-      loader:{
-        provide:TranslateLoader,
-        useFactory:CreatTranslateLoader,
-        deps:[HttpClient]
+    SwiperModule,
+    DropdownModule,
+    TranslateModule.forRoot(
+      {
+        defaultLanguage: 'en',
+        loader: {
+          provide: TranslateLoader,
+          useFactory: CreatTranslateLoader,
+          deps: [
+            HttpClient
+          ],
+        }
       }
-    }),
+    ),
+
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-export function CreatTranslateLoader(http:HttpClient){
-return new TranslateHttpLoader(http,'./assets/i18n/','.json')
+
+export function CreatTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json')
 }

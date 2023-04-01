@@ -3,6 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+  firtsApi:"https://fakestoreapi.com/",
+  secsApi:"https://api.escuelajs.co/api/v1/",
   production: false
 };
 

@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="my-2 w-25">
+        <app-select [data]="categorys" [title]="'Categoryes'" (selectValue)="filterCategory($event)"></app-select>
+    </div>
+    <div class="first-api-data row " *ngIf="!loading">
+        <div class="product-crd col-md-3 col-sm-12" *ngFor="let item of listProduct ">
+            <app-first-product [data]="item"></app-first-product>
+        </div>
+    </div>
+    <div class="text-center w-100" *ngIf="loading">
+        <app-spinner></app-spinner>
+    </div>
+</div>

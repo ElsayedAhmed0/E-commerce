@@ -7,7 +7,10 @@ import { FirstProductDetailsComponent } from './components/first-product-details
 import { SecProductDetailsComponent } from './components/sec-product-details/sec-product-details.component';
 import { SharedModule } from '../shared/shared.module';
 import { BunnerComponent } from './components/bunner/bunner.component';
-
+import { TranslateModule } from '@ngx-translate/core';
+import { SwiperModule } from 'swiper/angular';
+import { RouterModule } from '@angular/router';
+import { FirstProductAllcartsComponent } from './components/first-product-allcarts/first-product-allcarts.component';
 @NgModule({
   declarations: [
     AllProductsComponent,
@@ -15,14 +18,20 @@ import { BunnerComponent } from './components/bunner/bunner.component';
     SecProductComponent,
     FirstProductDetailsComponent,
     SecProductDetailsComponent,
-    BunnerComponent
+    BunnerComponent,
+    FirstProductAllcartsComponent
   ],
   imports: [
     CommonModule,
     SharedModule,
+    SwiperModule,
+    RouterModule,
+    TranslateModule.forChild({
+      extend:true
+      })
   ],
-  // exports:[
-  //   AllProductsComponent
-  // ]
+  exports:[
+    AllProductsComponent
+  ]
 })
 export class ProductModule { }
