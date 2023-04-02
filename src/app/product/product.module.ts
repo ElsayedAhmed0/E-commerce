@@ -11,6 +11,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { SwiperModule } from 'swiper/angular';
 import { RouterModule } from '@angular/router';
 import { FirstProductAllcartsComponent } from './components/first-product-allcarts/first-product-allcarts.component';
+import { SecoundProductAllCartsComponent } from './components/secound-product-all-carts/secound-product-all-carts.component';
 @NgModule({
   declarations: [
     AllProductsComponent,
@@ -19,7 +20,8 @@ import { FirstProductAllcartsComponent } from './components/first-product-allcar
     FirstProductDetailsComponent,
     SecProductDetailsComponent,
     BunnerComponent,
-    FirstProductAllcartsComponent
+    FirstProductAllcartsComponent,
+    SecoundProductAllCartsComponent
   ],
   imports: [
     CommonModule,

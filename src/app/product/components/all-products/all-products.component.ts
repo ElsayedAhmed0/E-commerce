@@ -8,18 +8,28 @@ import { ProductService } from '../../service/product.service';
 })
 export class AllProductsComponent implements OnInit {
   listProduct:any[]=[]
+  secProduct:any[]=[]
   loading: boolean = false
   constructor(private service: ProductService) { }
 
   ngOnInit(): void {
     this.getTheData()
+    this.getTheSecProduct()
   }
   getTheData() {
     this.loading = true
     this.service.getAllData().subscribe((res: any) => {
       this.loading = false
-      console.log(res);
       this.listProduct = res
+    })
+  }
+  getTheSecProduct(){
+    this.loading=true
+    this.service.getSecProduct().subscribe((res:any)=>{
+      this.loading=false
+      console.log(res);
+
+      this.secProduct=res
     })
   }
 }

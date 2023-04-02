@@ -1,1 +1,14 @@
-<p>sec-product works!</p>
+<div class="product-card">
+    <div class="img-pro" routerLink="/secdetails/{{data.id}}">
+        <img src="{{data.images}}" alt="">
+    </div>
+    <span class="wishlist-icon">
+    <i class="fa-regular fa-heart not-active" ></i>
+    <i class="fa-solid fa-heart active"></i>
+  </span>
+    <div class="desc-details">
+        <h3>{{data.title | slice:1:40}}</h3>
+        <p>{{data.description | slice:1:80}}</p>
+        <span>{{data.price}}</span>
+    </div>
+</div>

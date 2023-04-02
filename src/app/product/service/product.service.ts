@@ -23,5 +23,9 @@ export class ProductService {
   getProdctsByCategory(keyword:string){
     return this.http.get(environment.firtsApi + 'products/category/'+keyword)
   }
+
+  getSecProduct(){
+    return this.http.get(environment.secsApi + 'products')
+  }
 }
 
