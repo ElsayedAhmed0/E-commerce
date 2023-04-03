@@ -42,3 +42,13 @@ span.see-more {
     padding: 4px 10px;
     color: #fff;
 }
+
+:host ::ng-deep ul.uk-slider-nav.uk-dotnav.uk-flex-center.uk-margin li a {
+    width: 25px;
+    height: 8px;
+    border-radius: 6px 0;
+}
+
+:host ::ng-deep ul.uk-slider-nav.uk-dotnav.uk-flex-center.uk-margin li.uk-active a {
+    background: #ff1f20;
+}
