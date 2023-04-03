@@ -13,7 +13,7 @@ export class ProductService {
   }
 
   getProductById(id: any) {
-    return this.http.get(environment.firtsApi + 'products' + id)
+    return this.http.get(environment.firtsApi + 'products/' + id)
   }
 
   getAllCategorys(){

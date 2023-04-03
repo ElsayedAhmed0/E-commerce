@@ -11,6 +11,7 @@ export class FirstProductDetailsComponent implements OnInit {
   id: any
   data: any = {}
   loading :boolean =false
+  addbtn:boolean=false
   constructor(private route: ActivatedRoute, private service: ProductService) {
     this.id = this.route.snapshot.paramMap.get("id")
    }
@@ -19,7 +20,11 @@ export class FirstProductDetailsComponent implements OnInit {
     this.getProductDetailsById()
   }
 getProductDetailsById(){
+  this.loading=true
   return this.service.getProductById(this.id).subscribe((res:any)=>{
+    this.loading=false
+    console.log(res);
+
     this.data = res
   })
 }

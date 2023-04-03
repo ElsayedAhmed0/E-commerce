@@ -10,7 +10,9 @@ body {
 *,
 .mat-h3,
 .mat-subheading-2,
-.mat-typography h3 {
+.mat-typography h3,
+h2,
+.mat-typography h2 {
     font-family: cursive;
 }
 
