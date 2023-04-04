@@ -27,8 +27,6 @@ export class AllProductsComponent implements OnInit {
     this.loading=true
     this.service.getSecProduct().subscribe((res:any)=>{
       this.loading=false
-      console.log(res);
-
       this.secProduct=res
     })
   }

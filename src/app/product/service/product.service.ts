@@ -27,5 +27,8 @@ export class ProductService {
   getSecProduct(){
     return this.http.get(environment.secsApi + 'products')
   }
+  getSecProductById(id:any){
+    return this.http.get(environment.secsApi + 'products/' + id)
+  }
 }
 

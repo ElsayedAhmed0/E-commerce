@@ -23,8 +23,6 @@ getProductDetailsById(){
   this.loading=true
   return this.service.getProductById(this.id).subscribe((res:any)=>{
     this.loading=false
-    console.log(res);
-
     this.data = res
   })
 }

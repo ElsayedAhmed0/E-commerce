@@ -20,6 +20,7 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     FormsModule,
+    RouterModule,
     TranslateModule.forChild({
     extend:true
     })

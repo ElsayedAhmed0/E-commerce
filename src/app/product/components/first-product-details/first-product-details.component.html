@@ -52,10 +52,17 @@
                                     <div class="addvalue" *ngIf="!addbtn">
                                         <span class="white-btn mr-10" (click)="addbtn = true">{{'AddtoCart'| translate}}</span>
                                     </div>
-                                    <div class="d-flex w-50" *ngIf="addbtn">
-                                        <input type="number" class="form-control">
-                                        <span style="width: 10px;"></span>
-                                        <button class="btn btn-primary" (click)="addbtn = false">add</button>
+                                    <div *ngIf="addbtn">
+                                        <div class="d-flex w-50">
+
+                                            <button class="btn btn-dark">-</button>
+                                            <span style="width: 5px;"></span>
+                                            <input type="number" class="form-control" min="1">
+                                            <span style="width: 5px;"></span>
+                                            <button class="btn btn-dark">+</button>
+
+                                        </div>
+                                        <button class="d-block btn btn-primary mt-2 mb-2" (click)="addbtn = false">add</button>
                                     </div>
                                 </div>
                             </div>
