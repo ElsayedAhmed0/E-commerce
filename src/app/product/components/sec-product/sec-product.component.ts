@@ -7,9 +7,12 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SecProductComponent implements OnInit {
 @Input() data:any ={}
+status: boolean = false;
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  wishListEvent(){
+    this.status = !this.status;
+}
 }

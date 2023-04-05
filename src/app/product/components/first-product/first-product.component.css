@@ -47,6 +47,10 @@ span.wishlist-icon {
     color: #fff;
 }
 
-span.wishlist-icon .active {
+span.wishlist-icon i {
     display: none;
+}
+
+span.wishlist-icon i.active {
+    display: block;
 }

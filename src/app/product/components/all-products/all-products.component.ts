@@ -7,8 +7,9 @@ import { ProductService } from '../../service/product.service';
   styleUrls: ['./all-products.component.css'],
 })
 export class AllProductsComponent implements OnInit {
-  listProduct:any[]=[]
-  secProduct:any[]=[]
+  listProduct: any[] = []
+  secProduct: any[] = []
+  cartProduct: any[] = []
   loading: boolean = false
   constructor(private service: ProductService) { }
 
@@ -23,11 +24,29 @@ export class AllProductsComponent implements OnInit {
       this.listProduct = res
     })
   }
-  getTheSecProduct(){
-    this.loading=true
-    this.service.getSecProduct().subscribe((res:any)=>{
-      this.loading=false
-      this.secProduct=res
+  getTheSecProduct() {
+    this.loading = true
+    this.service.getSecProduct().subscribe((res: any) => {
+      this.loading = false
+      this.secProduct = res
     })
+  }
+  addToCart(event: any) {
+    if ("cart" in localStorage) {
+      this.cartProduct = JSON.parse(localStorage.getItem("cart")!)
+      let exist = this.cartProduct.find(item => item.id == event.id)
+      if (exist) {
+        alert("this items already i dart")
+      } else {
+        this.cartProduct.push(event)
+        localStorage.setItem("cart", JSON.stringify(this.cartProduct))
+      }
+    } else {
+      this.cartProduct.push(event)
+      localStorage.setItem("cart", JSON.stringify(this.cartProduct))
+    }
+
+
+
   }
 }

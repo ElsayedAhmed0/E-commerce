@@ -2,9 +2,9 @@
     <div class="img-pro" routerLink="/details/{{data.id}}">
         <img src="{{data.image}}" alt="">
     </div>
-    <span class="wishlist-icon">
-      <i class="fa-regular fa-heart not-active" ></i>
-      <i class="fa-solid fa-heart active"></i>
+    <span class="wishlist-icon" (click)="wishListEvent();addToWishlist()">
+      <i class="fa-regular fa-heart " [ngClass]="!status ? 'active' : ''"></i>
+      <i class="fa-solid fa-heart " [ngClass]="status ? 'active' : ''"></i>
     </span>
     <div class="desc-details">
         <h3>{{data.title | slice:1:40}}</h3>

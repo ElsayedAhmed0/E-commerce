@@ -49,10 +49,10 @@
                                         </div>
                                         <p>({{data?.rating.count}})</p>
                                     </div>
-                                    <div class="addvalue" *ngIf="!addbtn">
-                                        <span class="white-btn mr-10" (click)="addbtn = true">{{'AddtoCart'| translate}}</span>
+                                    <div class="addvalue">
+                                        <span class="white-btn mr-10">{{'AddtoCart'| translate}}</span>
                                     </div>
-                                    <div *ngIf="addbtn">
+                                    <!-- <div *ngIf="addbtn">
                                         <div class="d-flex w-50">
 
                                             <button class="btn btn-dark">-</button>
@@ -63,7 +63,7 @@
 
                                         </div>
                                         <button class="d-block btn btn-primary mt-2 mb-2" (click)="addbtn = false">add</button>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>

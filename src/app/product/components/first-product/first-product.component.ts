@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ProductService } from '../../service/product.service';
 
 @Component({
@@ -8,11 +8,18 @@ import { ProductService } from '../../service/product.service';
 })
 export class FirstProductComponent implements OnInit {
   @Input() data: any = {}
+  @Output() item = new EventEmitter
+  status: boolean = false;
   // addbtn: boolean = false;
   product: any[] = []
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  wishListEvent() {
+    this.status = !this.status;
+  }
+  addToWishlist() {
+this.item.emit(this.data)
+  }
 }
