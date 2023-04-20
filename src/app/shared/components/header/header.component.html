@@ -1,4 +1,4 @@
-<section class="header-bar">
+<section class="header-bar" [ngClass]="status ? 'RTL' : ''">
     <div class="container">
         <div class="menu-bar">
             <div class="logo-img">
@@ -27,18 +27,21 @@
                         </div>
                     </li>
                     <!-- <span class="w-16"></span>
-                    <li><a href=""> {{'Pages' | translate}}</a></li> -->
+                    <li><a href=""> {{'Pages' | translate}}</a></li>  -->
                 </ul>
             </nav>
             <div class="user-interface">
                 <ul>
-                    <li><i class="fa-solid fa-language"></i></li>
+                    <li (click)="dirlang()"><i class="fa-solid fa-language"></i></li>
                     <span class="w-16"></span>
                     <li><i class="fa-solid fa-magnifying-glass"></i></li>
                     <span class="w-16"></span>
-                    <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <li><a routerLink="/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <span class="w-16"></span>
+                    <li><a routerLink="/wishlist"><i class="fa-regular fa-heart"></i></a></li>
                     <span class="w-16"></span>
                     <li><a href=""><i class="fa-regular fa-user"></i></a></li>
+
                 </ul>
             </div>
         </div>

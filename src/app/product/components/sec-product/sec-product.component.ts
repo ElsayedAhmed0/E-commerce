@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {  Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-sec-product',
@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SecProductComponent implements OnInit {
 @Input() data:any ={}
+@Output() item = new EventEmitter
 status: boolean = false;
   constructor() { }
 
@@ -14,5 +15,8 @@ status: boolean = false;
   }
   wishListEvent(){
     this.status = !this.status;
+}
+addToWishlist() {
+  this.item.emit(this.data)
 }
 }

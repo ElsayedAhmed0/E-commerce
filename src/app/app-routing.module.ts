@@ -6,6 +6,8 @@ import { FirstProductDetailsComponent } from './product/components/first-product
 import { NotFoundComponent } from './shared/components/not-found/not-found.component';
 import { SecProductDetailsComponent } from './product/components/sec-product-details/sec-product-details.component';
 import { SecoundProductAllCartsComponent } from './product/components/secound-product-all-carts/secound-product-all-carts.component';
+import { WishlistComponent } from './wishlist/components/wishlist/wishlist.component';
+import { CartsComponent } from './wishlist/components/carts/carts.component';
 
 const routes: Routes = [
   {
@@ -29,13 +31,21 @@ const routes: Routes = [
     component: SecProductDetailsComponent
   },
   {
-    path: '',
-    redirectTo: 'products',
-    pathMatch:'full'
+    path: "wishlist",
+    component: WishlistComponent
   },
   {
-    path:'**',
-    component:NotFoundComponent
+    path: "cart",
+    component:CartsComponent
+  },
+  {
+    path: '',
+    redirectTo: 'products',
+    pathMatch: 'full'
+  },
+  {
+    path: '**',
+    component: NotFoundComponent
   }
 ];
 

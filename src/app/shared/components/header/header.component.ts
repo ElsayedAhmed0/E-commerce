@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+status: boolean = false;
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  dirlang(){
+    this.status = !this.status;
+  }
 }

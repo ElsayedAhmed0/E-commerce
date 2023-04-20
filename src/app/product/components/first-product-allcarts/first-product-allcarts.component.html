@@ -4,7 +4,7 @@
     </div>
     <div class="first-api-data row " *ngIf="!loading">
         <div class="product-crd col-md-3 col-sm-12" *ngFor="let item of listProduct ">
-            <app-first-product [data]="item"></app-first-product>
+            <app-first-product [data]="item" (item)="addToWishlist($event)"></app-first-product>
         </div>
     </div>
     <div class="text-center w-100" *ngIf="loading">

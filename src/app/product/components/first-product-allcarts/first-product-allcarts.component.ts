@@ -9,6 +9,7 @@ import { ProductService } from '../../service/product.service';
 export class FirstProductAllcartsComponent implements OnInit {
   listProduct: any[] = []
   categorys: any[] = []
+  wishlistProduct: any[] = []
   filterPro: any[] = []
   loading: boolean = false
   constructor(private service: ProductService) { }
@@ -47,6 +48,22 @@ export class FirstProductAllcartsComponent implements OnInit {
       this.loading = false
       this.listProduct = proCat
     })
+  }
+
+  addToWishlist(event: any) {
+    if ("cart" in localStorage) {
+      this.wishlistProduct = JSON.parse(localStorage.getItem("cart")!)
+      let exist = this.wishlistProduct.find(item => item.id == event.id)
+      if (exist) {
+        alert("this items already i dart")
+      } else {
+        this.wishlistProduct.push(event)
+        localStorage.setItem("cart", JSON.stringify(this.wishlistProduct))
+      }
+    } else {
+      this.wishlistProduct.push(event)
+      localStorage.setItem("cart", JSON.stringify(this.wishlistProduct))
+    }
   }
 
 }

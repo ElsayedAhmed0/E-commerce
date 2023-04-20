@@ -20,6 +20,6 @@ export class FirstProductComponent implements OnInit {
     this.status = !this.status;
   }
   addToWishlist() {
-this.item.emit(this.data)
+    this.item.emit(this.data)
   }
 }
