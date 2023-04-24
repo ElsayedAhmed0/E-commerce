@@ -53,7 +53,7 @@ export class FirstProductAllcartsComponent implements OnInit {
   addToWishlist(event: any) {
     if ("cart" in localStorage) {
       this.wishlistProduct = JSON.parse(localStorage.getItem("cart")!)
-      let exist = this.wishlistProduct.find(item => item.id == event.id)
+      let exist = this.wishlistProduct.find(item => item.id == event.id && item.title == event.title)
       if (exist) {
         alert("this items already i dart")
       } else {
