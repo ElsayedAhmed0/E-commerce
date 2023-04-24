@@ -16,7 +16,11 @@ export class WishlistComponent implements OnInit {
     if ("cart" in localStorage) {
       this.wishlistProduct = JSON.parse(localStorage.getItem("cart")!)
     }
-    console.log(this.wishlistProduct);
 
+  }
+
+  removeFromWishlist(index:number){
+    this.wishlistProduct.splice(index, 1)
+    localStorage.setItem("cart", JSON.stringify(this.wishlistProduct))
   }
 }

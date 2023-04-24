@@ -26,7 +26,7 @@ export class CartsComponent implements OnInit {
   getCartTotal() {
     this.total = 0
     for (let x in this.CartProduct) {
-      this.total += this.CartProduct[x].item.price * this.CartProduct[x].quantity;
+      this.total += this.CartProduct[x].price * this.CartProduct[x].quantity;
     }
   }
   // ******** count mins Amount ******
@@ -43,12 +43,34 @@ export class CartsComponent implements OnInit {
   }
   // ******** detect Change ******
   detectChange() {
+    this.getCartTotal()
     localStorage.setItem("theCart", JSON.stringify(this.CartProduct))
   }
   // ******** detect Change ******
   deletItem(index: number) {
     this.CartProduct.splice(index, 1)
-    localStorage.setItem("cart", JSON.stringify(this.CartProduct))
+    localStorage.setItem("theCart", JSON.stringify(this.CartProduct))
   }
+ // ******** clear shoping cart ******
+  clearData(){
+    this.CartProduct=[]
+    this.getCartTotal()
+    localStorage.setItem("theCart", JSON.stringify(this.CartProduct))
+  }
+// ******** finish add Cart ******
+  addCart(){
+    let products = this.CartProduct.map(item => {
+      return { productId: item.id, quantity: item.quantity }
+    })
+    let model = {
+      userId: 5,
+      date: new Date(),
+      products: products
+    }
+    this.service.creatCart(model).subscribe((res: any) => {
+      this.success = true
+    })
+    console.log(model);
 
+  }
 }

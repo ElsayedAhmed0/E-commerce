@@ -4,6 +4,22 @@
     box-shadow: 0px 8px 16px #b4b4b4;
     cursor: pointer;
     padding: 15px;
+    position: relative;
+}
+
+span.wishlist-icon {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background: #a8a8a8;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
 }
 
 .wishlist-img img {
