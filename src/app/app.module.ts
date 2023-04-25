@@ -13,6 +13,9 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClientModule } from '@angular/common/http';
 import { SwiperModule } from 'swiper/angular';
 import { DropdownModule } from 'primeng/dropdown';
+import { AuthModule } from './auth/auth.module';
+import { MatrialModule } from './shared/material.module';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -23,6 +26,8 @@ import { DropdownModule } from 'primeng/dropdown';
     BrowserAnimationsModule,
     ProductModule,
     SharedModule,
+    AuthModule,
+    MatrialModule,
     WishlistModule,
     HttpClientModule,
     SwiperModule,

@@ -12,5 +12,13 @@
     "ProductDetails": "تفاصيل المنتج",
     "AddtoCart": "أضف إلي العربة",
     "firstapi": "المنتجات الاول",
-    "secapi": "المنتجات الثانية"
+    "secapi": "المنتجات الثانية",
+    "Login": " دخول",
+    "Register": "تسجيل دخول",
+    "Email": "البريد الالكتروني",
+    "Name": "الاسم",
+    "Password": "كلمه المرور",
+    "ConfirmPassword": "تأكيد كلمه المرور",
+    "CreatAccount": "اضافة حساب",
+    "Alreadyhaveaccount": "املك حساب بالفعل"
 }

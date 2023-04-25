@@ -8,6 +8,8 @@ import { SecProductDetailsComponent } from './product/components/sec-product-det
 import { SecoundProductAllCartsComponent } from './product/components/secound-product-all-carts/secound-product-all-carts.component';
 import { WishlistComponent } from './wishlist/components/wishlist/wishlist.component';
 import { CartsComponent } from './wishlist/components/carts/carts.component';
+import { LoginComponent } from './auth/components/login/login.component';
+import { RegisterComponent } from './auth/components/register/register.component';
 
 const routes: Routes = [
   {
@@ -37,6 +39,14 @@ const routes: Routes = [
   {
     path: "cart",
     component:CartsComponent
+  },
+  {
+    path: "login",
+    component:LoginComponent
+  },
+  {
+    path: "register",
+    component:RegisterComponent
   },
   {
     path: '',

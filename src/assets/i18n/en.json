@@ -13,6 +13,14 @@
     "ProductDetails": "Product Details",
     "AddtoCart": "Add to Cart",
     "firstapi": "First Api",
-    "secapi": "Second Api"
+    "secapi": "Second Api",
+    "Login": "Login",
+    "Register": "Register",
+    "Email": "E mail",
+    "Name": "Name",
+    "Password": "Password",
+    "ConfirmPassword": "Confirm Password",
+    "CreatAccount": "Creat Account",
+    "Alreadyhaveaccount": "Already have account"
 
 }
