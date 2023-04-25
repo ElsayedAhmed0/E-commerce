@@ -7,7 +7,7 @@ import { SelectComponent } from './components/select/select.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,6 +21,7 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     FormsModule,
     RouterModule,
+    ReactiveFormsModule,
     TranslateModule.forChild({
     extend:true
     })
@@ -30,6 +31,7 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     SpinnerComponent,
     SelectComponent,
+    ReactiveFormsModule,
     RouterModule,
     FormsModule,
     NotFoundComponent

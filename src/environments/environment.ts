@@ -5,6 +5,7 @@
 export const environment = {
   firtsApi:"https://fakestoreapi.com/",
   secsApi:"https://api.escuelajs.co/api/v1/",
+  userapi:"http://localhost:3000/",
   production: false
 };
 
