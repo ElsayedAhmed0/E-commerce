@@ -1,4 +1,4 @@
-<section class="header-bar" [ngClass]="status ? 'RTL' : ''">
+<section class="header-bar">
     <div class="container">
         <div class="menu-bar">
             <div class="logo-img">
@@ -32,7 +32,8 @@
             </nav>
             <div class="user-interface">
                 <ul>
-                    <li (click)="dirlang()"><i class="fa-solid fa-language"></i></li>
+                    <li (click)="dirlang()" *ngIf="status"><i class="fa-solid fa-language"></i></li>
+                    <li (click)="lrtlang()" *ngIf="!status"><i class="fa-solid fa-language"></i></li>
                     <span class="w-16"></span>
                     <!-- <li><i class="fa-solid fa-magnifying-glass"></i></li>
                     <span class="w-16"></span> -->

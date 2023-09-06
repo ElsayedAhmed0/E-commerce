@@ -25,11 +25,12 @@ export class RegisterComponent implements OnInit {
 
   submit() {
     const model = {
-      username:this.userForm.value.username,
-      email:this.userForm.value.email,
-      password:this.userForm.value.password,
+      username:this.userForm?.value.username,
+      email:this.userForm?.value.email,
+      password:this.userForm?.value.password,
     }
     this.service.createUser(model).subscribe((res: any)=>{
+      console.log(res);
       alert("success")
       this.router.navigate(['/products'])
     })

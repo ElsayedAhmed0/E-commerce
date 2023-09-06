@@ -13,5 +13,7 @@ export class AuthService {
 
   createUser(model:any){
     return this.http.post(environment.userapi + 'users' , model)
+    // return this.http.post('https://fakestoreapi.com/auth/login' , model)
+
   }
 }
